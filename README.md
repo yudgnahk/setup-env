@@ -1,20 +1,9 @@
-# Install Library for Golang dev
+# Install Softwares/Libraries/Tools for Backend Development on New MacOS Using HomeBrew
 
-## Install HomeBrew
-
-```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
-
-## Install Iterm2 (optional)
-
-```brew cask install iterm2```
-
-## Install go
-```brew install golang```
-
-## Setup Environment
-We’ll need to add to .bashrc or .zshrc (if you’re using zsh) with the following info. (Ex: nano ~/.bashrc )
-```
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-```
+- Check the `tools` section in `install.sh` to add or remove the tools/software/libraries that will be installed by HomeBrew.
+- Remove the `oh-my-zsh` section if you don't want to use it.
+- Finally, run the following commands:
+    ```sh
+    chmod +x install.sh
+    ./install.sh
+    ```
