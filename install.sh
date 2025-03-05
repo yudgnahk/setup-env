@@ -72,15 +72,6 @@ for plugin in "${plugins[@]}"; do
     fi
 done
 
-# Enable zsh completions for git, docker, and k8s
-echo "Enabling zsh completions for git, docker, and k8s..."
-{
-    echo "autoload -Uz compinit && compinit"
-    echo "zstyle ':completion:*:*:git:*' script ~/.oh-my-zsh/plugins/git/git.plugin.zsh"
-    echo "zstyle ':completion:*:*:docker:*' script ~/.oh-my-zsh/plugins/docker/_docker"
-    echo "zstyle ':completion:*:*:kubectl:*' script ~/.oh-my-zsh/plugins/kubectl/_kubectl"
-} >> ~/.zshrc
-
 echo "Installation and setup complete."
 echo ""
 echo "Please restart your terminal or run 'source ~/.zshrc' to apply changes."
